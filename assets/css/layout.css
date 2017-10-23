@@ -1,0 +1,121 @@
+
+body {
+    color: #222;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    /*background-image: url('../images/stripes.png');*/
+    background-image: linear-gradient(
+        45deg,
+        rgba(48,48,48, 0.2) 10%,
+        transparent 10%,
+        transparent 50%,
+        rgba(48,48,48, 0.2) 50%,
+        rgba(48,48,48, 0.2) 60%,
+        transparent 60%,
+        transparent);
+    background-size: 10px 10px;
+}
+
+.container-fluid.full-width-content {
+    padding: 0;
+    margin: 36px 0 0 0;
+}
+
+@media (min-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px){
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+.bg-stripe {
+    background: url('../images/stripes.png');
+}
+
+#top {
+    position: relative;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-top-bg {
+    box-sizing: border-box;
+    background: #ffffff;
+    height: 60px;
+    width: 102%;
+    padding: 0 2%;
+    margin: 0 -1%;
+    border-bottom: 4px solid rgba(200, 200, 200, 1);
+    /*box-shadow: 0px 5px 10px -5px black;*/
+    box-shadow: none;
+}
+
+#nav-top-bg.scrolled {
+    box-shadow: 0px 0px 20px -4px black;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#nav-top {
+    padding: 0;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+#nav-logo {
+    background: url('../images/logo-menu.png');
+    width: 190px;
+    height: 30px;
+    margin: 15px 10px;
+    padding: 0;
+}
+
+
+#footer {
+    padding: 0;
+    margin: 80px 0 0 0;
+    background: #2b2a2e;
+    height: 75px;
+    color: rgba(255,255,255,0.8);
+}
+
+#footer > .container {
+    line-height: 75px;
+    font-size: 16px;
+}
+
+.load-spinner-bg {
+    position: absolute;
+    opacity: 0;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(250,250,250,0.5);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/updating.gif');
+
+    transition: .2s;
+}

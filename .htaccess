@@ -1,0 +1,10 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/index.php(.*)$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteCond %{REQUEST_URI} ^(.*)$
+RewriteRule ^(.*)$ /index\.php?$2&mAct=$1 [QSA,L,NC]
+
+ErrorDocument 404 /errors/404.php
