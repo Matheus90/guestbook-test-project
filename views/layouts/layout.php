@@ -21,22 +21,18 @@
 <body>
 <div id="top"></div>
 <div id="nav-top-bg" class="container-fluid fixed-top navbar-expand">
-    <nav id="nav-top" class="navbar container navbar-expand">
-        <a class="navbar-brand" href="#">
+    <nav id="nav-top" class="navbar container">
+        <a class="navbar-brand" href="#top">
             <div id="nav-logo"></div>
         </a>
 
         <ul class="navbar-nav nav">
-
-            <!--
-            <?php if( isset($navTopLinks) && is_array($navTopLinks) ):?>
-                <?php foreach($navTopLinks as $anchor => $label ): ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $anchor; ?>"><?php echo $label; ?></a>
-                    </li>
-                <?php endforeach; ?>
-            <?php endif; ?>
-            -->
+            <li class="nav-item">
+                <a class="nav-link" href="#review-list">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#review-form">Rate Us!</a>
+            </li>
         </ul>
 
     </nav>
