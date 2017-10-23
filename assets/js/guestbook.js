@@ -95,7 +95,6 @@ onChangeItemCount = function(e){
 }
 
 $("#page-guestbook").on({
-    keyup: onChangeItemCount,
     change: onChangeItemCount
 }, "#pagination-count");
 

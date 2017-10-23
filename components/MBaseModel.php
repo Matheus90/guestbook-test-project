@@ -129,7 +129,7 @@ class MBaseModel {
 
             unset($attributes['id']);
             if( in_array('create_time', array_keys($attributes)) )
-                $attributes['create_time'] = (new DateTime())->format('Y-m-d h:i:s');
+                $attributes['create_time'] = (new DateTime('now', new DateTimeZone('UTC')))->format('Y-m-d H:i:s');
 
             extract($this->getInsertAttrList($attributes));
 
@@ -148,7 +148,7 @@ class MBaseModel {
 
             unset($attributes['id']);
             if( in_array('update_time', array_keys($attributes))  )
-                $attributes['update_time'] = (new DateTime())->format('Y-m-d h:i:s');
+                $attributes['update_time'] = (new DateTime('now', new DateTimeZone('UTC')))->format('Y-m-d H:i:s');
 
             $setPairs = $this->getUpdateAttrList($attributes);
 

@@ -15,7 +15,7 @@
     </div>
 
     <div class="review-date">
-        <?php echo (new DateTime($review->create_time))->format('Y-m-d h:i:s'); ?>
+        <?php echo (new DateTime($review->create_time, new DateTimeZone('UTC')))->setTimezone(new DateTimeZone('Europe/Budapest'))->format('Y-m-d H:i:s'); ?>
     </div>
 
     <div class="review-name">
