@@ -83,6 +83,23 @@ $("#page-guestbook").on('click', "#reviewStars .fa-star", function(e){
 });
 
 
+onChangeItemCount = function(e){
+    var count = $(e.target).val();
+
+    console.log(count);
+
+    if( $.isNumeric(count) ){
+        console.log('number');
+        loadPage(1);
+    }
+}
+
+$("#page-guestbook").on({
+    keyup: onChangeItemCount,
+    change: onChangeItemCount
+}, "#pagination-count");
+
+
 $("#page-guestbook").on('submit', "#review-form", function(e){
     e.preventDefault();
 

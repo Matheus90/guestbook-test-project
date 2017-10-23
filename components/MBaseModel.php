@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Class MBaseModel
+ *
+ * Base class for models like User, Post, Review, etc.
+ * Built-in save, delete function and more.
+ */
 class MBaseModel {
 
     // Model ID
@@ -12,17 +18,26 @@ class MBaseModel {
         return $this->_tableName;
     }
 
-    function __construct() {
+    function __construct() {}
 
-    }
-
+    /**
+     * Attributes and the labels to be displayed for them
+     *
+     * @return array
+     */
     public function attributeLabels(){
         return [
-            'id' => 'ID'
+            'id' => 'ID',
+            'recaptcha' => 'No offense but are you real?'
         ];
     }
 
 
+    /**
+     * Set Object properties from the provided $dataArray
+     *
+     * @param array $dataArray
+     */
     public function setAttributes($dataArray = []){
         $attributes = array_keys($this->attributeLabels());
 
@@ -31,6 +46,20 @@ class MBaseModel {
                 $this->$attr = $dataArray[$attr];
             }
         }
+    }
+
+    /**
+     * Get the label for the Attribute
+     *
+     * @param $attributeName
+     */
+    public function getLabel($attributeName = null){
+        $attributes = $this->attributeLabels();
+
+        if( $attributeName != null && is_array($attributes) && isset($attributes[$attributeName]) )
+            return $attributes[$attributeName];
+
+        return '';
     }
 
     /**
@@ -134,8 +163,9 @@ class MBaseModel {
 
     }
 
+
     /**
-     *  Delete placeholder does not needed yet
+     *  Delete placeholder, is not needed yet
      */
     public function delete(){
 

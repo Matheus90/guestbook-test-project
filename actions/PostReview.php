@@ -11,7 +11,7 @@ class PostReview extends MBaseAction {
             $review->setAttributes($_POST['Review']);
 
             $errors = [];
-            if( !isset($_POST['Review']['rating']) )
+            if( !isset($_POST['Review']['rating']) || !isBetween($_POST['Review']['rating'], 1, 5))
                 array_push($errors, 'rating');
 
             if( !isset($_POST['Review']['email']) )
@@ -43,27 +43,4 @@ class PostReview extends MBaseAction {
 
         return $obj->success;
     }
-
-
-    public function setupAPIRequest($url, $jsonData = []){
-
-        $headers = [
-            'Content-Type: application/json',
-            'Accept: application/json'
-        ];
-
-        $ch = curl_init($url);
-
-        $jsonDataEncoded = json_encode($jsonData);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonDataEncoded);
-
-        // Pass TRUE or 1 if you want to wait for and catch the response against the request made
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
-        return $ch;
-
-    }
-
 }

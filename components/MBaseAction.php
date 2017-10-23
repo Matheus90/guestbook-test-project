@@ -3,9 +3,7 @@
 
 class MBaseAction {
 
-    public function call($parameters){
-
-    }
+    public function call($parameters){}
 
     public function render($viewName, $parameters = [], $layout = null){
         if( $layout === null )

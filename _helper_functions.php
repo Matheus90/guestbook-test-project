@@ -1,5 +1,11 @@
 <?php
 
+function isBetween($num, $min, $max) {
+    if( floatval($num) < floatval($min) || floatval($num) > floatval($max))
+        return false;
+    else
+        return true;
+}
 
 function requireToVar($action, $file, $variables = []){
     ob_start();
@@ -14,16 +20,3 @@ function exception_handler($exception) {
 }
 
 set_exception_handler('exception_handler');
-
-spl_autoload_register(function ($class_name) {
-    $conf = [
-        'actions',
-        'models'
-    ];
-
-    foreach($conf as $directoryToSearch){
-        if (is_file(ROOT.'/'.$directoryToSearch . '/' . $class_name . '.php')) {
-            require_once ROOT.'/'.$directoryToSearch . '/' . $class_name . '.php';
-        }
-    }
-});
