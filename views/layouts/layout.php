@@ -48,8 +48,13 @@
 
 <div id="footer" class="container-fluid full-width-content">
     <div class="container flex-row">
-        mate.simon@matemoto.com
-        <span style="float: right;">I hope you like it. :)</span>
+        <span style="float: left;">
+            <i class="fa fa-envelope" aria-hidden="true" style="color: rgb(200,255,0);"></i> mate.simon@matemoto.com
+        </span>
+        <a href="https://github.com/Matheus90/guestbook-test-project" target="_blank" style="float: right; color: rgb(200,255,0);">
+            <i class="fa fa-github" aria-hidden="true" style="font-size: 20px;"></i> Public Code
+        </a>
+        <span style="font-family: courier, monospace;"><?php echo htmlspecialchars('{ Hope you like it }'); ?></span>
     </div>
 </div>
 <!-- Optional JavaScript -->

@@ -103,16 +103,23 @@ ul.navbar-nav li {
 
 
 #footer {
-    padding: 0;
-    margin: 80px 0 0 0;
+    width: 102%;
+    padding: 0 2%;
+    margin: 60px -1% 0 -1%;
     background: #2b2a2e;
-    height: 75px;
+    min-height: 75px;
     color: rgba(255,255,255,0.8);
+    box-shadow: 0px -5px 10px -5px Black;
 }
 
 #footer > .container {
+    text-align: center;
     line-height: 75px;
     font-size: 16px;
+}
+
+#footer > .container > * {
+    display: inline-block;
 }
 
 .load-spinner-bg {
