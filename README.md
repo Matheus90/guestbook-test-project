@@ -1,5 +1,5 @@
 # guestbook-test-project
-It's just a [test project](http://matemoto.com:8083/guestbook) made for a job application, using PHP, JQuery, Bootstrap. Built from bottom to top by Máté Simon.
+It's just a [test project](http://matemoto.com:8083/guestbook) made for a job application, using PHP, JQuery, Bootstrap. Built from bottom to top by [Máté Simon](https://www.linkedin.com/in/máté-simon-85a23b74).
 
 
 List of To Dos to set up the project:
