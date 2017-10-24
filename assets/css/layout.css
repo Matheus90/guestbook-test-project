@@ -106,13 +106,14 @@ ul.navbar-nav li {
 
 
 #footer {
-    width: 102%;
-    padding: 0 2%;
-    margin: 60px -1% 0 -1%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 60px 0 0 0;
     background: #2b2a2e;
     min-height: 75px;
     color: rgba(255,255,255,0.8);
-    box-shadow: 0px -5px 10px -5px Black;
+    box-shadow: 0px 0px 10px 0px Black;
 }
 
 #footer > .container {
