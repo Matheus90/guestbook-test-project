@@ -17,6 +17,7 @@
         }
     } ?>
 
+    <title>matemoto.com - Imaginary Guestbook</title>
 </head>
 <body>
 <div id="top"></div>
@@ -28,10 +29,13 @@
 
         <ul class="navbar-nav nav">
             <li class="nav-item">
-                <a class="nav-link" href="#review-list">Reviews</a>
+                <a class="nav-link" href="#top"><i class="fa fa-angle-double-up" aria-hidden="true"></i> Top</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#review-form">Rate Us!</a>
+                <a class="nav-link" href="#review-list"><i class="fa fa-comments" aria-hidden="true"></i> Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#review-form"><i class="fa fa-commenting" aria-hidden="true"></i> Rate Us!</a>
             </li>
         </ul>
 
