@@ -84,8 +84,11 @@
     position: absolute;
     width: 1px;
     height: 1px;
-    top: 50px;
+    top: 10px;
     left: 50px;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 
